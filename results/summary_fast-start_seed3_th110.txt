@@ -1,0 +1,3 @@
+Simulation: fast-start seed=3 threshold=1.1
+Short flows scheduled: 2066
+Retransmission rate: 17.2596%

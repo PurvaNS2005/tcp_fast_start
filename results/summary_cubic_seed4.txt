@@ -1,0 +1,3 @@
+Simulation: cubic seed=4 threshold=1.1
+Short flows scheduled: 1949
+Retransmission rate: 8.07476%
