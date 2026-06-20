@@ -1,3 +1,0 @@
-Simulation: fast-start seed=1 threshold=1.05
-Short flows scheduled: 2019
-Retransmission rate: 18.0694%

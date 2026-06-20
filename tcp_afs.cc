@@ -370,9 +370,9 @@ TcpAdaptiveFastStart::IncreaseWindow (Ptr<TcpSocketState> tcb,
   // time against the last RTT boundary time + current RTT estimate.
   // tcb->m_lastRtt gives the most recent RTT sample.
   Time now    = Simulator::Now ();
-  Time rttEst = tcb->m_lastRtt.IsZero ()
+  Time rttEst = tcb->m_lastRtt.Get ().IsZero ()
                   ? MilliSeconds (22)   // fallback to simulation baseline
-                  : tcb->m_lastRtt;
+                  : tcb->m_lastRtt.Get ();
 
   bool atRttBoundary = (now >= m_lastRttBoundary + rttEst);
 

@@ -1,0 +1,44 @@
+========================================================================
+AFS PROJECT — SECTION V SUMMARY TABLE
+Authors: Anshuman Dave (231EE107) | Purva Siddapurmath (231EE242)
+========================================================================
+
+1. OVERALL SHORT-FLOW FCT (all mice, 5 seeds)
+  Metric                    Cubic      AFS k=2.0     Change
+  --------------------------------------------------------
+  Mean FCT (s)             0.2071         0.1967      -5.0%
+  Median FCT (s)           0.1320         0.1175     -11.0%
+  P95 FCT (s)              0.5895         0.5752      -2.4%
+  P99 FCT (s)              1.5536         1.5373      -1.0%
+  N flows                    9848           9848
+
+2. STRATIFIED FCT (mean, by flow size)
+  Bucket                 N    Cubic FCT      AFS FCT    Change  C Slowdown  AFS Slowdown
+  ------------------------------------------------------------------------------------
+  XS (<20 KB)         5654       0.1690       0.1640     -3.0%        7.32x         7.45x
+  S  (20–50 KB)       1589       0.1629       0.1369    -15.9%        3.53x         4.44x
+  M  (50–100 KB)      1223       0.1804       0.1627     -9.8%        2.73x         3.47x
+  L  (>100 KB)        1382       0.4372       0.4216     -3.6%        4.32x         5.31x
+
+3. RETRANSMISSION RATES (5 seeds, k=2.0)
+  Cubic  mean=0.75%  per-seed: ['0.7', '0.8', '0.7', '0.7', '0.8']
+  AFS    mean=0.84%  per-seed: ['0.8', '0.9', '0.9', '0.8', '0.9']
+  Ratio AFS/Cubic: 1.12×  (target ≤ 1.5×)
+
+4. k SENSITIVITY (seed 1, retransmit rate %)
+  k=1.5: 0.75%
+  k=2.0: 0.75%
+  k=2.5: 0.75%
+  k=3.0: 0.75%
+
+5. LONG-FLOW (ELEPHANT) THROUGHPUT
+  Cubic  mean=1.728 Mbps  Jain=0.4208
+  AFS    mean=1.840 Mbps  Jain=0.4150
+  Change: +6.5%  (target < 2% regression)
+
+6. BOTTLENECK QUEUE OCCUPANCY (buffer = 25 000 B)
+  Cubic  mean=24 B  max=75 B
+  AFS    mean=27 B  max=124 B
+  Mean queue change: +12.2%
+
+========================================================================
